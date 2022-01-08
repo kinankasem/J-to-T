@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<head>
+    <title>Geoinformatics Arabic</title>
+    <link href="data/Sicrpt.css" rel="stylesheet">    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5d415153e09b4b70b90f46e0c6eeb3ff {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    <!-- header start -->
+    <div id="header" class="section">
+        <img alt="" class="img-circle" src="data/h2.png">
+        <p>Geoinformatic Arabic</p>
+        <p><strong>By Kinan Alqassem</strong></p>
+    </div>
+    <!-- header end -->
+            <div class="folium-map" id="map_5d415153e09b4b70b90f46e0c6eeb3ff" ></div>
+        
+</body>
+<script>    
+    
+            var map_5d415153e09b4b70b90f46e0c6eeb3ff = L.map(
+                "map_5d415153e09b4b70b90f46e0c6eeb3ff",
+                {
+                    center: [34.548, 36.273],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 8,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_92324ed5e3464aaeabdcc7fd79752a07 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 8, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_5d415153e09b4b70b90f46e0c6eeb3ff);
+        
+    
+            var marker_2f7a9dfc1fa944dbb8bc0fa196c7b2ad = L.marker(
+                [34.89373445, 35.87967554],
+                {}
+            ).addTo(map_5d415153e09b4b70b90f46e0c6eeb3ff);
+        
+    
+            var icon_b2169dc0164c4f51a6505bfe5edd1b1c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-star-empty", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2f7a9dfc1fa944dbb8bc0fa196c7b2ad.setIcon(icon_b2169dc0164c4f51a6505bfe5edd1b1c);
+        
+    
+        var popup_faf99e2485b345958c5dc98677dfcd7c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_11c5cf9336814b9785c995c324389121 = $(`<div id="html_11c5cf9336814b9785c995c324389121" style="width: 100.0%; height: 100.0%;"><html> <p style="text-align:center">Tartous Governorate Center</p> <iframe src="https://drive.google.com/embeddedfolderview?id=1TVAhv-xL4CY2QMjP8o0NF22MBYK8zlme#grid" style="width:750px; height:450px; border:0;"></iframe> </html> </div>`)[0];
+            popup_faf99e2485b345958c5dc98677dfcd7c.setContent(html_11c5cf9336814b9785c995c324389121);
+        
+
+        marker_2f7a9dfc1fa944dbb8bc0fa196c7b2ad.bindPopup(popup_faf99e2485b345958c5dc98677dfcd7c)
+        ;
+
+        
+    
+    
+            marker_2f7a9dfc1fa944dbb8bc0fa196c7b2ad.bindTooltip(
+                `<div>
+                     Governorate
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cfdbb7175fb746c5b8e5bca49fb2e835 = L.marker(
+                [34.89038993, 35.87742428],
+                {}
+            ).addTo(map_5d415153e09b4b70b90f46e0c6eeb3ff);
+        
+    
+            var icon_8084cc7be7634c53a45d8217ac521886 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-star-empty", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_cfdbb7175fb746c5b8e5bca49fb2e835.setIcon(icon_8084cc7be7634c53a45d8217ac521886);
+        
+    
+        var popup_c3904c6ef13342f791e46dd88ac90725 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1c915d95e9b34922b4b2fc5f4c6b73c6 = $(`<div id="html_1c915d95e9b34922b4b2fc5f4c6b73c6" style="width: 100.0%; height: 100.0%;"><html> <p style="text-align:center">Old Twon</p> <iframe src="https://drive.google.com/embeddedfolderview?id=14dy7sF718O3JoFEd3HYOTKIy9hiuSY2u#grid" style="width:750px; height:450px; border:0;"></iframe> </html></div>`)[0];
+            popup_c3904c6ef13342f791e46dd88ac90725.setContent(html_1c915d95e9b34922b4b2fc5f4c6b73c6);
+        
+
+        marker_cfdbb7175fb746c5b8e5bca49fb2e835.bindPopup(popup_c3904c6ef13342f791e46dd88ac90725)
+        ;
+
+        
+    
+    
+            marker_cfdbb7175fb746c5b8e5bca49fb2e835.bindTooltip(
+                `<div>
+                     Old Twon
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cb09a2ac18ce4b7084cfb8be984b3e5e = L.marker(
+                [34.89164316, 35.87831106],
+                {}
+            ).addTo(map_5d415153e09b4b70b90f46e0c6eeb3ff);
+        
+    
+            var icon_5ab5508da87744b7b602022765083e22 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-star-empty", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_cb09a2ac18ce4b7084cfb8be984b3e5e.setIcon(icon_5ab5508da87744b7b602022765083e22);
+        
+    
+        var popup_5a2f552ff7ef4430a9a78e6047f971ab = L.popup({"maxWidth": "100%"});
+
+        
+            var html_00081ed24c2c440a9aa706acc592f1d7 = $(`<div id="html_00081ed24c2c440a9aa706acc592f1d7" style="width: 100.0%; height: 100.0%;"><html> <p style="text-align:center">Tartous Museum</p> <iframe src="https://drive.google.com/embeddedfolderview?id=1qHpRbCAq_qelRB0KlE-8aSRx0kSo0Ozl#grid" style="width:750px; height:450px; border:0;"></iframe> </html> </div>`)[0];
+            popup_5a2f552ff7ef4430a9a78e6047f971ab.setContent(html_00081ed24c2c440a9aa706acc592f1d7);
+        
+
+        marker_cb09a2ac18ce4b7084cfb8be984b3e5e.bindPopup(popup_5a2f552ff7ef4430a9a78e6047f971ab)
+        ;
+
+        
+    
+    
+            marker_cb09a2ac18ce4b7084cfb8be984b3e5e.bindTooltip(
+                `<div>
+                     Tartous Museum
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bc86c87a395f4a36b848a136aa033001 = L.marker(
+                [34.88323245, 35.87826866],
+                {}
+            ).addTo(map_5d415153e09b4b70b90f46e0c6eeb3ff);
+        
+    
+            var icon_b2f8be4b324248d2be233425d65530b3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-star-empty", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_bc86c87a395f4a36b848a136aa033001.setIcon(icon_b2f8be4b324248d2be233425d65530b3);
+        
+    
+        var popup_cc4f610136c24c08ba5668d7f78ee9ff = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e41d15df90964e03958708d64bdf2224 = $(`<div id="html_e41d15df90964e03958708d64bdf2224" style="width: 100.0%; height: 100.0%;"><html> <p style="text-align:center">The Ridge</p> <iframe src="https://drive.google.com/embeddedfolderview?id=1vkdbQ0u4t6sgzaFvOQwTYLNped19-ZXi#grid" style="width:750px; height:450px; border:0;"></iframe> </html> </div>`)[0];
+            popup_cc4f610136c24c08ba5668d7f78ee9ff.setContent(html_e41d15df90964e03958708d64bdf2224);
+        
+
+        marker_bc86c87a395f4a36b848a136aa033001.bindPopup(popup_cc4f610136c24c08ba5668d7f78ee9ff)
+        ;
+
+        
+    
+    
+            marker_bc86c87a395f4a36b848a136aa033001.bindTooltip(
+                `<div>
+                     The Ridge
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c2530abcd7f64d958247c0ff849a487b = L.marker(
+                [34.88376181, 35.87882172],
+                {}
+            ).addTo(map_5d415153e09b4b70b90f46e0c6eeb3ff);
+        
+    
+            var icon_f7d798994d514c86b565ab548c6a11a8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-star-empty", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c2530abcd7f64d958247c0ff849a487b.setIcon(icon_f7d798994d514c86b565ab548c6a11a8);
+        
+    
+        var popup_7d9b6bbfa30545c1b19a0290a71771a9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3eaaf467792d432b8959dbfb93d0b870 = $(`<div id="html_3eaaf467792d432b8959dbfb93d0b870" style="width: 100.0%; height: 100.0%;"><html> <p style="text-align:center">The Ridge</p> <iframe src="https://drive.google.com/embeddedfolderview?id=1Yc5jLXGHEwJj2Agnmi3F4gvzf2mV8Lxy#grid" style="width:750px; height:450px; border:0;"></iframe> </html> </div>`)[0];
+            popup_7d9b6bbfa30545c1b19a0290a71771a9.setContent(html_3eaaf467792d432b8959dbfb93d0b870);
+        
+
+        marker_c2530abcd7f64d958247c0ff849a487b.bindPopup(popup_7d9b6bbfa30545c1b19a0290a71771a9)
+        ;
+
+        
+    
+    
+            marker_c2530abcd7f64d958247c0ff849a487b.bindTooltip(
+                `<div>
+                     The Ridge
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f74cb2f68a324198b2eefce20ec152b8 = L.marker(
+                [34.77426144, 35.99854444],
+                {}
+            ).addTo(map_5d415153e09b4b70b90f46e0c6eeb3ff);
+        
+    
+            var icon_350951993b63462582e01f539f7f6267 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-star-empty", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f74cb2f68a324198b2eefce20ec152b8.setIcon(icon_350951993b63462582e01f539f7f6267);
+        
+    
+        var popup_0d8cd1963cc44791909e3595d52654b2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6d907f26cf8e406784a9501b5f5b7098 = $(`<div id="html_6d907f26cf8e406784a9501b5f5b7098" style="width: 100.0%; height: 100.0%;"><html> <p style="text-align:center">Farm</p> <iframe src="https://drive.google.com/embeddedfolderview?id=1MPtRhi6YRq_WMTu9MwqfGYN1F9Pb0NwO#grid" style="width:750px; height:450px; border:0;"></iframe> </html> </div>`)[0];
+            popup_0d8cd1963cc44791909e3595d52654b2.setContent(html_6d907f26cf8e406784a9501b5f5b7098);
+        
+
+        marker_f74cb2f68a324198b2eefce20ec152b8.bindPopup(popup_0d8cd1963cc44791909e3595d52654b2)
+        ;
+
+        
+    
+    
+            marker_f74cb2f68a324198b2eefce20ec152b8.bindTooltip(
+                `<div>
+                     Farm
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_accedbe76e4a401e912aea29c67fbe94 = L.marker(
+                [34.77458043, 36.00026983],
+                {}
+            ).addTo(map_5d415153e09b4b70b90f46e0c6eeb3ff);
+        
+    
+            var icon_d9b06219bc094e4393295bd478b404e9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-star-empty", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_accedbe76e4a401e912aea29c67fbe94.setIcon(icon_d9b06219bc094e4393295bd478b404e9);
+        
+    
+        var popup_3c4b0765e1b94b13acf020e3d6754a8d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8cc79d5b61874e31be9b6eb096f07c7d = $(`<div id="html_8cc79d5b61874e31be9b6eb096f07c7d" style="width: 100.0%; height: 100.0%;"><html> <p style="text-align:center">Farm</p> <iframe src="https://drive.google.com/embeddedfolderview?id=1vsC55tq_2cxADFWdoJEjT0zi786LurqB#grid" style="width:750px; height:450px; border:0;"></iframe> </html> </div>`)[0];
+            popup_3c4b0765e1b94b13acf020e3d6754a8d.setContent(html_8cc79d5b61874e31be9b6eb096f07c7d);
+        
+
+        marker_accedbe76e4a401e912aea29c67fbe94.bindPopup(popup_3c4b0765e1b94b13acf020e3d6754a8d)
+        ;
+
+        
+    
+    
+            marker_accedbe76e4a401e912aea29c67fbe94.bindTooltip(
+                `<div>
+                     Farm
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f65162e7a35549d0b84f23a6aef7f51d = L.marker(
+                [34.7716443, 36.00271364],
+                {}
+            ).addTo(map_5d415153e09b4b70b90f46e0c6eeb3ff);
+        
+    
+            var icon_38247ba2e6c84184a65466c72c07b596 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-star-empty", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f65162e7a35549d0b84f23a6aef7f51d.setIcon(icon_38247ba2e6c84184a65466c72c07b596);
+        
+    
+        var popup_463325fe1f374767949df1f07cae3613 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bbafb978d0e7464dadab66bcae1ed676 = $(`<div id="html_bbafb978d0e7464dadab66bcae1ed676" style="width: 100.0%; height: 100.0%;"><html> <p style="text-align:center">Farm</p> <iframe src="https://drive.google.com/embeddedfolderview?id=1N-KQ-aPvSaf_2w2VliniFqGud6k9choz#grid" style="width:750px; height:450px; border:0;"></iframe> </html> </div>`)[0];
+            popup_463325fe1f374767949df1f07cae3613.setContent(html_bbafb978d0e7464dadab66bcae1ed676);
+        
+
+        marker_f65162e7a35549d0b84f23a6aef7f51d.bindPopup(popup_463325fe1f374767949df1f07cae3613)
+        ;
+
+        
+    
+    
+            marker_f65162e7a35549d0b84f23a6aef7f51d.bindTooltip(
+                `<div>
+                     Farm
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7f06cb02c6264ac49644136e5a4e4adf = L.marker(
+                [34.76709174, 36.09750502],
+                {}
+            ).addTo(map_5d415153e09b4b70b90f46e0c6eeb3ff);
+        
+    
+            var icon_296c0bb382534c83a2b7f604e30c869e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-star-empty", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_7f06cb02c6264ac49644136e5a4e4adf.setIcon(icon_296c0bb382534c83a2b7f604e30c869e);
+        
+    
+        var popup_db2cb6fe5af643cdb9ea1b8e76f75d53 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3fc9757f105147c3807a8ef86fc84da9 = $(`<div id="html_3fc9757f105147c3807a8ef86fc84da9" style="width: 100.0%; height: 100.0%;"><html> <p style="text-align:center">Al-Basel Dam</p> <iframe src="https://drive.google.com/embeddedfolderview?id=11KtXlxGwObV9nYJjyaGIRINTDt3RCZFp#grid" style="width:750px; height:450px; border:0;"></iframe> </html> </div>`)[0];
+            popup_db2cb6fe5af643cdb9ea1b8e76f75d53.setContent(html_3fc9757f105147c3807a8ef86fc84da9);
+        
+
+        marker_7f06cb02c6264ac49644136e5a4e4adf.bindPopup(popup_db2cb6fe5af643cdb9ea1b8e76f75d53)
+        ;
+
+        
+    
+    
+            marker_7f06cb02c6264ac49644136e5a4e4adf.bindTooltip(
+                `<div>
+                     Al-Basel Dam
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5a1b1e9df5974d5e89ea6d343cd15b3b = L.marker(
+                [34.76908385, 36.10420016],
+                {}
+            ).addTo(map_5d415153e09b4b70b90f46e0c6eeb3ff);
+        
+    
+            var icon_9dd9db9ba7ae45b1a4fbacd14bd4d404 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-star-empty", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5a1b1e9df5974d5e89ea6d343cd15b3b.setIcon(icon_9dd9db9ba7ae45b1a4fbacd14bd4d404);
+        
+    
+        var popup_b03d5fc630be4906a0d209a4489a0f1f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a94a5ca07a3a46f4b41f606fbe0fece9 = $(`<div id="html_a94a5ca07a3a46f4b41f606fbe0fece9" style="width: 100.0%; height: 100.0%;"><html> <p style="text-align:center">Al-Basel Dam</p> <iframe src="https://drive.google.com/embeddedfolderview?id=13r5MBpvVJPSQcSPDeGRPU6K5bKeZVFvM#grid" style="width:750px; height:450px; border:0;"></iframe> </html> </div>`)[0];
+            popup_b03d5fc630be4906a0d209a4489a0f1f.setContent(html_a94a5ca07a3a46f4b41f606fbe0fece9);
+        
+
+        marker_5a1b1e9df5974d5e89ea6d343cd15b3b.bindPopup(popup_b03d5fc630be4906a0d209a4489a0f1f)
+        ;
+
+        
+    
+    
+            marker_5a1b1e9df5974d5e89ea6d343cd15b3b.bindTooltip(
+                `<div>
+                     Al-Basel Dam
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b7208ce2c43341c1bbd7b64d4e259c54 = L.marker(
+                [34.77901492, 36.18588881],
+                {}
+            ).addTo(map_5d415153e09b4b70b90f46e0c6eeb3ff);
+        
+    
+            var icon_97831914af8747e68363e53fa57388a9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-star-empty", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b7208ce2c43341c1bbd7b64d4e259c54.setIcon(icon_97831914af8747e68363e53fa57388a9);
+        
+    
+        var popup_f79c36bdb8184f12bbd294902c26ecbc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ae1471d414fe411b847dbbc48160ac95 = $(`<div id="html_ae1471d414fe411b847dbbc48160ac95" style="width: 100.0%; height: 100.0%;"><html> <p style="text-align:center">Al-Mitras Village</p> <img src="https://drive.google.com/uc?export=view&id=1uju5KbcMlTdrw39cl_PalXcJbJaiYULH" alt="Italian Trulli" width="200" > <img src="https://drive.google.com/uc?export=view&id=1Ll951BTdM592UTgAaw1rnMHb3tcCG_nz" alt="Italian Trulli" width="200" > <img src="https://drive.google.com/uc?export=view&id=1Mw0-jtaxxi3QQb9q2mypL78b8dwKpxI2" alt="Italian Trulli" width="200" > </html></div>`)[0];
+            popup_f79c36bdb8184f12bbd294902c26ecbc.setContent(html_ae1471d414fe411b847dbbc48160ac95);
+        
+
+        marker_b7208ce2c43341c1bbd7b64d4e259c54.bindPopup(popup_f79c36bdb8184f12bbd294902c26ecbc)
+        ;
+
+        
+    
+    
+            marker_b7208ce2c43341c1bbd7b64d4e259c54.bindTooltip(
+                `<div>
+                     Al-Mitras Vllage
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_47047aef81c34f8d9e9b759ddf0adad1 = L.marker(
+                [34.77749501, 36.20291241],
+                {}
+            ).addTo(map_5d415153e09b4b70b90f46e0c6eeb3ff);
+        
+    
+            var icon_84df561f925d492c895bf2a492151ab5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-star-empty", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_47047aef81c34f8d9e9b759ddf0adad1.setIcon(icon_84df561f925d492c895bf2a492151ab5);
+        
+    
+        var popup_291f51bfaa72458082d7e63d29e7074b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a2bc7823d3cf4b7cadb89a3910013469 = $(`<div id="html_a2bc7823d3cf4b7cadb89a3910013469" style="width: 100.0%; height: 100.0%;"><html> <p style="text-align:center">On the way</p> <img src="https://drive.google.com/uc?export=view&id=1gPht4L3iZUK7d8pg-jKXxoLqFNp3zJXi" alt="Italian Trulli" width="200" > </html></div>`)[0];
+            popup_291f51bfaa72458082d7e63d29e7074b.setContent(html_a2bc7823d3cf4b7cadb89a3910013469);
+        
+
+        marker_47047aef81c34f8d9e9b759ddf0adad1.bindPopup(popup_291f51bfaa72458082d7e63d29e7074b)
+        ;
+
+        
+    
+    
+            marker_47047aef81c34f8d9e9b759ddf0adad1.bindTooltip(
+                `<div>
+                     On the way
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0adbc400ebb14a6c8b64e37ab07ce18e = L.marker(
+                [34.7566084, 36.29489478],
+                {}
+            ).addTo(map_5d415153e09b4b70b90f46e0c6eeb3ff);
+        
+    
+            var icon_c5f6504fd910400393f6a5a6b479cb37 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-star-empty", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0adbc400ebb14a6c8b64e37ab07ce18e.setIcon(icon_c5f6504fd910400393f6a5a6b479cb37);
+        
+    
+        var popup_f707d16340974cd5a77540e4e6da39be = L.popup({"maxWidth": "100%"});
+
+        
+            var html_33ea128dca8e4bb9af6b57c68ffb1f3e = $(`<div id="html_33ea128dca8e4bb9af6b57c68ffb1f3e" style="width: 100.0%; height: 100.0%;"><html> <p style="text-align:center">Castle of Al-Hussn</p> <iframe src="https://drive.google.com/embeddedfolderview?id=1iuYOGqsgQ8CrgkNnZ77qBQFnan9p3Wpg#grid" style="width:750px; height:450px; border:0;"></iframe> </html></div>`)[0];
+            popup_f707d16340974cd5a77540e4e6da39be.setContent(html_33ea128dca8e4bb9af6b57c68ffb1f3e);
+        
+
+        marker_0adbc400ebb14a6c8b64e37ab07ce18e.bindPopup(popup_f707d16340974cd5a77540e4e6da39be)
+        ;
+
+        
+    
+    
+            marker_0adbc400ebb14a6c8b64e37ab07ce18e.bindTooltip(
+                `<div>
+                     Castle of Al-Hussn
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_210ca2b92fcc4803a297a5b6f768908c = L.marker(
+                [34.76770207, 36.26795652],
+                {}
+            ).addTo(map_5d415153e09b4b70b90f46e0c6eeb3ff);
+        
+    
+            var icon_c0f7bc06dd694e6ea90711f36ac2301a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-star-empty", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_210ca2b92fcc4803a297a5b6f768908c.setIcon(icon_c0f7bc06dd694e6ea90711f36ac2301a);
+        
+    
+        var popup_cd6a0f785f2c46faa55cd8cf96dfb5fa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_62482f0fe560483d81221dbe5747ca92 = $(`<div id="html_62482f0fe560483d81221dbe5747ca92" style="width: 100.0%; height: 100.0%;"><html> <p style="text-align:center">Saint George's Monastery</p> <iframe src="https://drive.google.com/embeddedfolderview?id=1M88E3S2293zOv08C3cWbXNWBrD2-KC4n#grid" style="width:750px; height:450px; border:0;"></iframe> </html> </div>`)[0];
+            popup_cd6a0f785f2c46faa55cd8cf96dfb5fa.setContent(html_62482f0fe560483d81221dbe5747ca92);
+        
+
+        marker_210ca2b92fcc4803a297a5b6f768908c.bindPopup(popup_cd6a0f785f2c46faa55cd8cf96dfb5fa)
+        ;
+
+        
+    
+    
+            marker_210ca2b92fcc4803a297a5b6f768908c.bindTooltip(
+                `<div>
+                     Saint George's Monastery
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_687f911d6dce453d909e79cd117c910f = L.marker(
+                [34.77531115, 36.25292773],
+                {}
+            ).addTo(map_5d415153e09b4b70b90f46e0c6eeb3ff);
+        
+    
+            var icon_68cb55254f654401b4c399b7e7a0f1c4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-star-empty", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_687f911d6dce453d909e79cd117c910f.setIcon(icon_68cb55254f654401b4c399b7e7a0f1c4);
+        
+    
+        var popup_6e8d2c64ed6747d9af308569eddc06d2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9ad7eb7e13ae4af599a2482437e6e48b = $(`<div id="html_9ad7eb7e13ae4af599a2482437e6e48b" style="width: 100.0%; height: 100.0%;"><html> <p style="text-align:center">On the way</p> <img src="https://drive.google.com/uc?export=view&id=1GMta96NLcoejF_UeeI1IPJeRYnVv4Esa" alt="Italian Trulli" width="200" > <img src="https://drive.google.com/uc?export=view&id=14RcAUmtdAPa7IqmljS7ruaIdC0C1w9do" alt="Italian Trulli" width="200" > </html></div>`)[0];
+            popup_6e8d2c64ed6747d9af308569eddc06d2.setContent(html_9ad7eb7e13ae4af599a2482437e6e48b);
+        
+
+        marker_687f911d6dce453d909e79cd117c910f.bindPopup(popup_6e8d2c64ed6747d9af308569eddc06d2)
+        ;
+
+        
+    
+    
+            marker_687f911d6dce453d909e79cd117c910f.bindTooltip(
+                `<div>
+                     On the way
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_30289e24b1be4a429de51d64264c6519 = L.marker(
+                [33.92423798, 36.70090415],
+                {}
+            ).addTo(map_5d415153e09b4b70b90f46e0c6eeb3ff);
+        
+    
+            var icon_5a06f361a8c146e793b159341649fcb0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-star-empty", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_30289e24b1be4a429de51d64264c6519.setIcon(icon_5a06f361a8c146e793b159341649fcb0);
+        
+    
+        var popup_d4dfdd930c7d45a69c36bc6e9034a169 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4131459c67e94b549ca5ebe6242e4eb4 = $(`<div id="html_4131459c67e94b549ca5ebe6242e4eb4" style="width: 100.0%; height: 100.0%;"><html> <p style="text-align:center">On the way</p> <img src="https://drive.google.com/uc?export=view&id=1TuhfR9cjvJSYUvdgIGJWvPIHDJPERhCl" alt="Italian Trulli" width="200" > <img src="https://drive.google.com/uc?export=view&id=11Pycy0PltrdPx4PlIH6Vw2ncfCBEQdfN" alt="Italian Trulli" width="200" > </html></div>`)[0];
+            popup_d4dfdd930c7d45a69c36bc6e9034a169.setContent(html_4131459c67e94b549ca5ebe6242e4eb4);
+        
+
+        marker_30289e24b1be4a429de51d64264c6519.bindPopup(popup_d4dfdd930c7d45a69c36bc6e9034a169)
+        ;
+
+        
+    
+    
+            marker_30289e24b1be4a429de51d64264c6519.bindTooltip(
+                `<div>
+                     On the way
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6583be5f852d4b45929d326334573482 = L.marker(
+                [33.82651451, 36.61326979],
+                {}
+            ).addTo(map_5d415153e09b4b70b90f46e0c6eeb3ff);
+        
+    
+            var icon_bb7d89e7b0864bd2bfd26f87df39721d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-star-empty", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6583be5f852d4b45929d326334573482.setIcon(icon_bb7d89e7b0864bd2bfd26f87df39721d);
+        
+    
+        var popup_9889320b2c6b4a128a70ecec03db7e6b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2053bfcd3f5c498a883b4ea1523bda25 = $(`<div id="html_2053bfcd3f5c498a883b4ea1523bda25" style="width: 100.0%; height: 100.0%;"><html> <p style="text-align:center">On the way</p> <img src="https://drive.google.com/uc?export=view&id=1610Fu14hIZGmsxuFRUH5pGdR8C-DW4k3" alt="Italian Trulli" width="200" > </html></div>`)[0];
+            popup_9889320b2c6b4a128a70ecec03db7e6b.setContent(html_2053bfcd3f5c498a883b4ea1523bda25);
+        
+
+        marker_6583be5f852d4b45929d326334573482.bindPopup(popup_9889320b2c6b4a128a70ecec03db7e6b)
+        ;
+
+        
+    
+    
+            marker_6583be5f852d4b45929d326334573482.bindTooltip(
+                `<div>
+                     On the way
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_01d4a03009df43b3b48a921f9e34a6e7 = L.marker(
+                [33.77646813, 36.58106162],
+                {}
+            ).addTo(map_5d415153e09b4b70b90f46e0c6eeb3ff);
+        
+    
+            var icon_9d7ee6589540416ba980544882fc462f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-star-empty", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_01d4a03009df43b3b48a921f9e34a6e7.setIcon(icon_9d7ee6589540416ba980544882fc462f);
+        
+    
+        var popup_1a693951c74e49c2b6483f82451d938b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_68e1bb69d9cd432f85b71350d488c887 = $(`<div id="html_68e1bb69d9cd432f85b71350d488c887" style="width: 100.0%; height: 100.0%;"><html> <p style="text-align:center">On the way</p> <img src="https://drive.google.com/uc?export=view&id=1wPKBHjGYeghrQvkA5_V8KruIAnKGwET3" alt="Italian Trulli" width="200" > <img src="https://drive.google.com/uc?export=view&id=1m58I_zucIrMqVBaVdkA6AIyWluaReNXH" alt="Italian Trulli" width="200" > </html></div>`)[0];
+            popup_1a693951c74e49c2b6483f82451d938b.setContent(html_68e1bb69d9cd432f85b71350d488c887);
+        
+
+        marker_01d4a03009df43b3b48a921f9e34a6e7.bindPopup(popup_1a693951c74e49c2b6483f82451d938b)
+        ;
+
+        
+    
+    
+            marker_01d4a03009df43b3b48a921f9e34a6e7.bindTooltip(
+                `<div>
+                     On the way
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e74b898977984b95abf3cea90c757cad = L.marker(
+                [33.7439937, 36.589663],
+                {}
+            ).addTo(map_5d415153e09b4b70b90f46e0c6eeb3ff);
+        
+    
+            var icon_171c204465f24d28af7162cbf9a33785 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-star-empty", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e74b898977984b95abf3cea90c757cad.setIcon(icon_171c204465f24d28af7162cbf9a33785);
+        
+    
+        var popup_af3decad89fc4683a941381c1c947cb1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_70911c94d4bf41a1bd7aed03361ceca7 = $(`<div id="html_70911c94d4bf41a1bd7aed03361ceca7" style="width: 100.0%; height: 100.0%;"><html> <p style="text-align:center">On the way</p> <img src="https://drive.google.com/uc?export=view&id=1EIZiv8XcUxob1rD-cSXOPQ22FvaiH3TD" alt="Italian Trulli" width="200" > <img src="https://drive.google.com/uc?export=view&id=1jVKiK9h51fl1qcZWOJY4838rApWjr9yH" alt="Italian Trulli" width="200" > <img src="https://drive.google.com/uc?export=view&id=1SswzHsXcWEXtEggz8CeQ2xW5ykNwW9ze" alt="Italian Trulli" width="200" > </html></div>`)[0];
+            popup_af3decad89fc4683a941381c1c947cb1.setContent(html_70911c94d4bf41a1bd7aed03361ceca7);
+        
+
+        marker_e74b898977984b95abf3cea90c757cad.bindPopup(popup_af3decad89fc4683a941381c1c947cb1)
+        ;
+
+        
+    
+    
+            marker_e74b898977984b95abf3cea90c757cad.bindTooltip(
+                `<div>
+                     On the way
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_642204e0e85b48059d36dd70724e7596 = L.marker(
+                [33.68303634, 36.54155969],
+                {}
+            ).addTo(map_5d415153e09b4b70b90f46e0c6eeb3ff);
+        
+    
+            var icon_0382d3bb574840b8806a2dca0798202f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-star-empty", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_642204e0e85b48059d36dd70724e7596.setIcon(icon_0382d3bb574840b8806a2dca0798202f);
+        
+    
+        var popup_78fe9fe6f561460d8ad4a4d1521e4d00 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_89268caa2060426487d045dd739a414d = $(`<div id="html_89268caa2060426487d045dd739a414d" style="width: 100.0%; height: 100.0%;"><html> <p style="text-align:center">On the way</p> <img src="https://drive.google.com/uc?export=view&id=1fwMXBr1X4CRFxxHb7xeOiAh6pHZZe12-" alt="Italian Trulli" width="200" > </html></div>`)[0];
+            popup_78fe9fe6f561460d8ad4a4d1521e4d00.setContent(html_89268caa2060426487d045dd739a414d);
+        
+
+        marker_642204e0e85b48059d36dd70724e7596.bindPopup(popup_78fe9fe6f561460d8ad4a4d1521e4d00)
+        ;
+
+        
+    
+    
+            marker_642204e0e85b48059d36dd70724e7596.bindTooltip(
+                `<div>
+                     On the way
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9f93dcf450d94bac9b8d42b9007f63a2 = L.marker(
+                [33.58633618, 36.38781085],
+                {}
+            ).addTo(map_5d415153e09b4b70b90f46e0c6eeb3ff);
+        
+    
+            var icon_117e22ff8f42490f82f32a15a37c9128 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-star-empty", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9f93dcf450d94bac9b8d42b9007f63a2.setIcon(icon_117e22ff8f42490f82f32a15a37c9128);
+        
+    
+        var popup_09c806bf442b46cdaf963f8f7fa55542 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_32838901d2a14015874913f605b06ace = $(`<div id="html_32838901d2a14015874913f605b06ace" style="width: 100.0%; height: 100.0%;"><html> <p style="text-align:center">On the way</p> <img src="https://drive.google.com/uc?export=view&id=10VVI596VDlQeay3fdR4YcDEvlm2HWyM1" alt="Italian Trulli" width="200" > <img src="https://drive.google.com/uc?export=view&id=16BTsK-aoYrbQ7AldN8cgaLj2Kw9k0PdJ" alt="Italian Trulli" width="200" > </html></div>`)[0];
+            popup_09c806bf442b46cdaf963f8f7fa55542.setContent(html_32838901d2a14015874913f605b06ace);
+        
+
+        marker_9f93dcf450d94bac9b8d42b9007f63a2.bindPopup(popup_09c806bf442b46cdaf963f8f7fa55542)
+        ;
+
+        
+    
+    
+            marker_9f93dcf450d94bac9b8d42b9007f63a2.bindTooltip(
+                `<div>
+                     On the way
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6c09e2e33d98448283b4fbc85161133c = L.marker(
+                [33.56791853, 36.365411],
+                {}
+            ).addTo(map_5d415153e09b4b70b90f46e0c6eeb3ff);
+        
+    
+            var icon_ba28578554ec4d35b2bbf776a37986c0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-star-empty", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6c09e2e33d98448283b4fbc85161133c.setIcon(icon_ba28578554ec4d35b2bbf776a37986c0);
+        
+    
+        var popup_a395ec6d6d504127890e461e7fb8670c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e0639b15c0d544b587b4b733ec5e16af = $(`<div id="html_e0639b15c0d544b587b4b733ec5e16af" style="width: 100.0%; height: 100.0%;"><html> <p style="text-align:center">On the way</p> <img src="https://drive.google.com/uc?export=view&id=134G6jlZCzIBNYjJZFSIk50qD2ss60Z3a" alt="Italian Trulli" width="200" > </html></div>`)[0];
+            popup_a395ec6d6d504127890e461e7fb8670c.setContent(html_e0639b15c0d544b587b4b733ec5e16af);
+        
+
+        marker_6c09e2e33d98448283b4fbc85161133c.bindPopup(popup_a395ec6d6d504127890e461e7fb8670c)
+        ;
+
+        
+    
+    
+            marker_6c09e2e33d98448283b4fbc85161133c.bindTooltip(
+                `<div>
+                     On the way
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_44080dbcfc874d1d938a897c325de5e6 = L.marker(
+                [33.71544852, 36.57008362],
+                {}
+            ).addTo(map_5d415153e09b4b70b90f46e0c6eeb3ff);
+        
+    
+            var icon_8a2d32a8262c44d99aeb6818bc41bd4e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-star-empty", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_44080dbcfc874d1d938a897c325de5e6.setIcon(icon_8a2d32a8262c44d99aeb6818bc41bd4e);
+        
+    
+        var popup_0a5e87bec3e846b7bc72343ca96ce71f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2b7e199d51d3413cafcd695526003a05 = $(`<div id="html_2b7e199d51d3413cafcd695526003a05" style="width: 100.0%; height: 100.0%;"><html> <p style="text-align:center">On the way</p> <img src="https://drive.google.com/uc?export=view&id=14R8DOZLYpNlQ08VBJUhHRCuj3czx1fRd" alt="Italian Trulli" width="200" > <img src="https://drive.google.com/uc?export=view&id=1ycmU8JZrotu5wDFsd-KRPMsV4ODjh-z1" alt="Italian Trulli" width="200" > <img src="https://drive.google.com/uc?export=view&id=1UW-mSj71DOu0ighUbD1kQkZesh09rUEN" alt="Italian Trulli" width="200" > </html></div>`)[0];
+            popup_0a5e87bec3e846b7bc72343ca96ce71f.setContent(html_2b7e199d51d3413cafcd695526003a05);
+        
+
+        marker_44080dbcfc874d1d938a897c325de5e6.bindPopup(popup_0a5e87bec3e846b7bc72343ca96ce71f)
+        ;
+
+        
+    
+    
+            marker_44080dbcfc874d1d938a897c325de5e6.bindTooltip(
+                `<div>
+                     On the way
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f10f6668c9b5472aa96a839ebf088a25 = L.marker(
+                [34.69659, 36.085682],
+                {}
+            ).addTo(map_5d415153e09b4b70b90f46e0c6eeb3ff);
+        
+    
+            var icon_f31b32a1a43c40228814527868a5c6f6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-star-empty", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f10f6668c9b5472aa96a839ebf088a25.setIcon(icon_f31b32a1a43c40228814527868a5c6f6);
+        
+    
+        var popup_68fcc6b69aa14bcb9064fea3db134400 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_57ae990959c34d5dad5534c02310ba35 = $(`<div id="html_57ae990959c34d5dad5534c02310ba35" style="width: 100.0%; height: 100.0%;"><html> <p style="text-align:center">On the way</p> <img src="https://drive.google.com/uc?export=view&id=1JHMWk5Os1nEeGwkPQfX1MqMWlU8LPyvB" alt="Italian Trulli" width="200" > <img src="https://drive.google.com/uc?export=view&id=17CPcetBk8RG9bOySO5IPbguNGTB9jupv" alt="Italian Trulli" width="200" > </html></div>`)[0];
+            popup_68fcc6b69aa14bcb9064fea3db134400.setContent(html_57ae990959c34d5dad5534c02310ba35);
+        
+
+        marker_f10f6668c9b5472aa96a839ebf088a25.bindPopup(popup_68fcc6b69aa14bcb9064fea3db134400)
+        ;
+
+        
+    
+    
+            marker_f10f6668c9b5472aa96a839ebf088a25.bindTooltip(
+                `<div>
+                     On the way
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
